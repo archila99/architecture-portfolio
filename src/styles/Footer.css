@@ -1,0 +1,28 @@
+.footer {
+  width: 100%;
+  background: #f7f7f7;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-row {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.footer-row p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

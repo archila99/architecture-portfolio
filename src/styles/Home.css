@@ -1,0 +1,81 @@
+.home-container {
+  min-height: calc(100vh - 80px);
+  /* account for navbar height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  /* Clean white background */
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.image-wrapper {
+  margin-bottom: 2rem;
+  padding-right: 50px;
+}
+
+.profile-photo {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.text-content {
+  max-width: 600px;
+  padding-left: 50px;
+  margin: 0 auto;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Responsive Design for Mobile/Tablet */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-wrapper {
+    padding-right: 0;
+    /* Remove side padding */
+    margin-bottom: 30px;
+    /* Add space below image */
+  }
+
+  .text-content {
+    padding-left: 0;
+    /* Remove side padding */
+    width: 100%;
+    padding: 0 20px;
+    /* Add small horizontal padding for text */
+  }
+
+  .profile-photo {
+    width: 200px;
+    /* Smaller image on mobile */
+    height: 200px;
+  }
+}

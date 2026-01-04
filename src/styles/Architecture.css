@@ -1,0 +1,247 @@
+.architecture-page {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+
+.page-title {
+  text-align: center;
+  font-size: 24px;
+  opacity: 0.6;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 0 20px 60px;
+  align-items: center;
+  /* Center cards */
+}
+
+.project-card {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.project-card-inner {
+  display: flex;
+  flex-direction: column;
+  /* Mobile first: stack vertically */
+  gap: 20px;
+  transition: gap 0.3s ease;
+}
+
+/* Desktop layout: Side-by-side usually */
+@media (min-width: 768px) {
+  .project-card-inner {
+    flex-direction: row;
+    align-items: flex-start;
+    /* Changed from center to flex-start to prevent shifts */
+  }
+}
+
+/* EXPANDED MODE: Force Column layout on all screens */
+.project-card-inner.expanded-mode {
+  flex-direction: column !important;
+  align-items: center;
+}
+
+/* Visualization Container (Holds Image or Gallery) */
+.visualization-container {
+  flex: 3;
+  /* Allocate more space to image/gallery */
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  min-height: 300px;
+  /* Ensure minimum height */
+  width: 100%;
+}
+
+/* In expanded mode, make the gallery wider and taller */
+.project-card-inner.expanded-mode .visualization-container {
+  width: 100%;
+  max-width: 100%;
+  /* Use full width available */
+}
+
+/* Single Image View */
+.single-image-wrapper {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.project-main-image {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3/2;
+  /* Bigger aspect ratio for larger display */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.single-image-wrapper:hover .project-main-image {
+  transform: scale(1.02);
+  filter: brightness(0.9);
+}
+
+.overlay-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.single-image-wrapper:hover .overlay-hint {
+  opacity: 1;
+}
+
+/* Inline Gallery Scroll View */
+.inline-gallery-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px;
+  /* Space for scrollbar and padding */
+  scroll-behavior: smooth;
+  height: 700px;
+  /* Much taller for expanded view */
+  width: 100%;
+  background: #f9f9f9;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Custom Scrollbar for gallery */
+.inline-gallery-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.inline-gallery-scroll::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 4px;
+}
+
+.inline-gallery-scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.gallery-item {
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  min-width: 300px;
+  /* Ensure items aren't too squished */
+}
+
+.gallery-item img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* Project Info Text */
+.project-info {
+  flex: 1;
+  /* Less space for text */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  /* Full width when stacked */
+}
+
+/* Center text in expanded mode */
+.project-card-inner.expanded-mode .project-info {
+  text-align: center;
+  align-items: center;
+  max-width: 800px;
+  /* Prevent text from being too wide */
+}
+
+.project-info h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.project-info p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.close-gallery-btn {
+  align-self: center;
+  /* Center the button in expanded mode */
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #333;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.close-gallery-btn:hover {
+  background: #333;
+  color: white;
+}
+
+/* Responsive Scaling for Gallery */
+@media (max-width: 60%) {
+
+  /* Reduce gallery height on mobile */
+  .inline-gallery-scroll {
+    height: 400px;
+    /* Reduced from 700px */
+    padding: 10px;
+  }
+
+  .gallery-item {
+    min-width: 250px;
+  }
+
+  /* Make main image responsive - scale with container */
+  /* Only apply to non-expanded projects */
+  .project-card-inner:not(.expanded-mode) .single-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-card-inner:not(.expanded-mode) .project-main-image {
+    width: 80%;
+    /* Scale to 80% of container width */
+    height: auto;
+    aspect-ratio: 3/2;
+  }
+}

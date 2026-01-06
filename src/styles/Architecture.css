@@ -217,17 +217,19 @@
 }
 
 /* Responsive Scaling for Gallery */
-@media (max-width: 60%) {
+@media (max-width: 768px) {
 
   /* Reduce gallery height on mobile */
   .inline-gallery-scroll {
-    height: 400px;
-    /* Reduced from 700px */
+    height: 60vh;
+    /* Use viewport height unit */
+    min-height: 400px;
     padding: 10px;
   }
 
+  /* Items should take most of the screen width */
   .gallery-item {
-    min-width: 250px;
+    min-width: 85vw;
   }
 
   /* Make main image responsive - scale with container */
@@ -239,9 +241,10 @@
   }
 
   .project-card-inner:not(.expanded-mode) .project-main-image {
-    width: 80%;
-    /* Scale to 80% of container width */
+    width: 100%;
+    /* Full width of container */
     height: auto;
     aspect-ratio: 3/2;
+    border-radius: 8px;
   }
 }

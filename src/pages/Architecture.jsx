@@ -10,7 +10,7 @@ export default function Architecture() {
   useEffect(() => {
     async function loadProjects() {
       try {
-        const res = await fetch("/data/projects.json");
+        const res = await fetch(`${import.meta.env.BASE_URL}data/projects.json`);
         const localProjects = await res.json();
         setProjects(localProjects);
       } catch (err) {
@@ -64,7 +64,7 @@ export default function Architecture() {
                   /* Default View: Single Main Image */
                   <div className="single-image-wrapper">
                     <img
-                      src={project.mainImage}
+                      src={`${import.meta.env.BASE_URL}${project.mainImage}`}
                       alt={project.title}
                       className="project-main-image"
                     />
@@ -75,12 +75,12 @@ export default function Architecture() {
                   <div className="inline-gallery-scroll">
                     {/* Main image first */}
                     <div className="gallery-item" onClick={(e) => { e.stopPropagation(); toggleExpand(project.id); }}>
-                      <img src={project.mainImage} alt={project.title} />
+                      <img src={`${import.meta.env.BASE_URL}${project.mainImage}`} alt={project.title} />
                     </div>
                     {/* Then gallery images */}
                     {project.gallery.map((img, idx) => (
                       <div key={idx} className="gallery-item">
-                        <img src={img} alt={`${project.title} ${idx + 1}`} />
+                        <img src={`${import.meta.env.BASE_URL}${img}`} alt={`${project.title} ${idx + 1}`} />
                       </div>
                     ))}
                   </div>

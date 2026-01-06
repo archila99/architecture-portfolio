@@ -29,7 +29,7 @@ export default function Navbar() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("/data/projects.json");
+        const response = await fetch(`${import.meta.env.BASE_URL}data/projects.json`);
         const projects = await response.json();
         // Combine static pages and projects into one searchable array
         const combined = [

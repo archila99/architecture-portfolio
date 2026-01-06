@@ -3,72 +3,71 @@
     "id": 1,
     "title": "Ali-Ihsan Villa",
     "description": "Mixed-used Villa.",
-    "mainImage": "../Portfolio/Ihsan/1.png",
+    "mainImage": "Portfolio/Ihsan/1.png",
     "gallery": [
-      "../Portfolio/Ihsan/1.png",
-      "../Portfolio/Ihsan/2.png", 
-      "../Portfolio/Ihsan/3.png"
+      "Portfolio/Ihsan/1.png",
+      "Portfolio/Ihsan/2.png",
+      "Portfolio/Ihsan/3.png"
     ]
   },
   {
     "id": 2,
     "title": "Menekse Residential",
     "description": "Futuristic Complex",
-    "mainImage": "../Portfolio/Menekse/1.jpg",
+    "mainImage": "Portfolio/Menekse/1.jpg",
     "gallery": [
-      "../Portfolio/Menekse/1.jpg",
-      "../Portfolio/Menekse/2.jpg", 
-      "../Portfolio/Menekse/3.jpg",
-      "../Portfolio/Menekse/4.jpg",
-      "../Portfolio/Menekse/5.jpg"
+      "Portfolio/Menekse/1.jpg",
+      "Portfolio/Menekse/2.jpg",
+      "Portfolio/Menekse/3.jpg",
+      "Portfolio/Menekse/4.jpg",
+      "Portfolio/Menekse/5.jpg"
     ]
   },
-   {
+  {
     "id": 3,
     "title": "OKP Residential",
     "description": "Flying Balcons",
-    "mainImage": "../Portfolio/OKP/1.png",
+    "mainImage": "Portfolio/OKP/1.png",
     "gallery": [
-      "../Portfolio/OKP/1.png",
-      "../Portfolio/OKP/2.png", 
-      "../Portfolio/OKP/3.png"
+      "Portfolio/OKP/1.png",
+      "Portfolio/OKP/2.png",
+      "Portfolio/OKP/3.png"
     ]
   },
   {
     "id": 4,
     "title": "Parla Residential",
     "description": "Brick Cover",
-    "mainImage": "../Portfolio/Parla/1.png",
+    "mainImage": "Portfolio/Parla/1.png",
     "gallery": [
-      "../Portfolio/Parla/1.png",
-      "../Portfolio/Parla/2.png", 
-      "../Portfolio/Parla/3.png",
-      "../Portfolio/Parla/4.png",
-      "../Portfolio/Parla/5.png"
-
+      "Portfolio/Parla/1.png",
+      "Portfolio/Parla/2.png",
+      "Portfolio/Parla/3.png",
+      "Portfolio/Parla/4.png",
+      "Portfolio/Parla/5.png"
     ]
   },
   {
     "id": 5,
     "title": "THC Residential",
     "description": "Flying Balcons",
-    "mainImage": "../Portfolio/THC/1.png",
+    "mainImage": "Portfolio/THC/1.png",
     "gallery": [
-      "../Portfolio/THC/1.png",
-      "../Portfolio/THC/2.png", 
-      "../Portfolio/THC/3.png"
+      "Portfolio/THC/1.png",
+      "Portfolio/THC/2.png",
+      "Portfolio/THC/3.png"
     ]
   },
   {
     "id": 6,
     "title": "THC Residential",
     "description": "Flying Balcons",
-    "mainImage": "../Portfolio/YC/1.png",
+    "mainImage": "Portfolio/YC/1.png",
     "gallery": [
-      "../Portfolio/YC/1.png",
-      "../Portfolio/YC/2.png", 
-      "../Portfolio/YC/3.png",
-      "../Portfolio/YC/4.png"
+      "Portfolio/YC/1.png",
+      "Portfolio/YC/2.png",
+      "Portfolio/YC/3.png",
+      "Portfolio/YC/4.png"
     ]
   }
 ]

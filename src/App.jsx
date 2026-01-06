@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Architecture from "./pages/Architecture";
-import Landscape from "./pages/Landscape";
+import SoftwareSkills from "./pages/SoftwareSkills";
 import Interior from "./pages/Interior";
 import AllProjects from "./pages/AllProjects";
 import News from "./pages/News";
@@ -21,7 +21,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/architecture" element={<Architecture />} />
-            <Route path="/landscape" element={<Landscape />} />
+            <Route path="/software-skills" element={<SoftwareSkills />} />
             <Route path="/interior" element={<Interior />} />
             <Route path="/projects" element={<AllProjects />} />
             <Route path="/news" element={<News />} />

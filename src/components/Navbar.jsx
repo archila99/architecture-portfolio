@@ -17,7 +17,7 @@ export default function Navbar() {
   const staticPages = [
     { title: "Home", path: "/" },
     { title: "Architecture", path: "/architecture" },
-    { title: "Landscape", path: "/landscape" },
+    { title: "Software Skills", path: "/software-skills" },
     { title: "Interior", path: "/interior" },
     { title: "All Projects", path: "/projects" },
     { title: "News", path: "/news" },
@@ -119,7 +119,7 @@ export default function Navbar() {
           </div>
 
           <Link to="/architecture" className="desktop-link">Architecture</Link>
-          <Link to="/landscape" className="desktop-link">Software</Link>
+          <Link to="/software-skills" className="desktop-link">Software Skills</Link>
           <Link to="/interior" className="desktop-link">Game</Link>
 
           <div
@@ -133,7 +133,7 @@ export default function Navbar() {
             {open && (
               <div className="dropdown" >
                 <Link to="/architecture" className="mobile-link" onClick={() => setOpen(false)}>Architecture</Link>
-                <Link to="/landscape" className="mobile-link" onClick={() => setOpen(false)}>Software</Link>
+                <Link to="/software-skills" className="mobile-link" onClick={() => setOpen(false)}>Software Skills</Link>
                 <Link to="/interior" className="mobile-link" onClick={() => setOpen(false)}>Game</Link>
                 <hr className="mobile-divider" />
                 <Link to="/news" onClick={() => setOpen(false)}>News</Link>

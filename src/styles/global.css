@@ -39,20 +39,27 @@ ul {
 /* ===============================
    LAYOUT: FLEX COLUMN FOR STICKY FOOTER
 ================================= */
-#root, .app-container {
+#root,
+.app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 main.content {
-  flex: 1; /* grows to fill space between navbar and footer */
+  flex: 1;
+  /* grows to fill space between navbar and footer */
 }
 
 /* ===============================
    TYPOGRAPHY
 ================================= */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
   line-height: 1.2;
   color: #111;

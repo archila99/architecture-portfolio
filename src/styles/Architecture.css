@@ -219,17 +219,31 @@
 /* Responsive Scaling for Gallery */
 @media (max-width: 768px) {
 
-  /* Reduce gallery height on mobile */
+  /* SAME SIZE AS MAIN IMAGE: 3/2 Aspect Ratio, Full Width */
   .inline-gallery-scroll {
-    height: 60vh;
-    /* Use viewport height unit */
-    min-height: 400px;
-    padding: 10px;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 3/2;
+    padding: 0;
+    /* Edge to edge */
+    scroll-snap-type: x mandatory;
+    background: transparent;
   }
 
-  /* Items should take most of the screen width */
+  /* Items strictly 100% width to match main image */
   .gallery-item {
-    min-width: 85vw;
+    min-width: 100%;
+    width: 100%;
+    scroll-snap-align: center;
+  }
+
+  /* Images cover the area exactly like the main image */
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    /* Match main image radius if possible, or 0 if preferred */
   }
 
   /* Make main image responsive - scale with container */

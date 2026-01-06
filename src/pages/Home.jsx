@@ -6,7 +6,7 @@ export default function Home() {
       <div className="content">
         <div className="image-wrapper">
           <img
-            src="/Portfolio/Personal/1.jpg"
+            src={`${import.meta.env.BASE_URL}Portfolio/Personal/1.jpg`}
             alt="Personal Portrait"
             className="profile-photo"
           />
